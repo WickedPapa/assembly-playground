@@ -6,10 +6,6 @@
 *.o
 
 # Eseguibili generati
-conta-bit-a-uno
-**/count-char
-./calculate-factorial-32-bit
-./calculate-factorial-64-bit
 *.exe
 
 # Backup ed editor temporanei
