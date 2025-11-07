@@ -23,7 +23,7 @@ count_loop:
     cmp $size, %esi
     jb count_loop
     mov %dx, tot(%rip)
-    xor %eax, %eax
+    xor %rax, %rax
     ret
 #---------------------------
 # sottoprogramma "conta"
