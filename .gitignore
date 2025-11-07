@@ -1,23 +1,9 @@
-# ==========================
-# File temporanei e compilati
-# ==========================
+# Ignore everything
+**
 
-# File oggetto
-*.o
+# Do not ignore directories
+!*/
 
-# Eseguibili generati
-*.exe
-
-# Backup ed editor temporanei
-*~
-*.swp
-*.tmp
-
-# Output di compilazioni o test
-a.out
-*.out
-
-# ==========================
-# Cartelle di sistema
-# ==========================
-.vscode/
+# Keep all .s and .c source files
+!**/*.s
+!**/*.c
