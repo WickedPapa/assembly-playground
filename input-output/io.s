@@ -4,6 +4,8 @@
 # x86-64 Linux (WSL compatibile)
 # ============================================
 
+.include "../io_utils.s"
+
 .section .data
 msg:    .ascii "Hello from io_utils!\r"   # terminato con CR (13)
 buf:    .space 64                         # buffer per input

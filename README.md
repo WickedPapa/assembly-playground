@@ -10,8 +10,10 @@ Each file explores a different low-level concept: registers, loops, memory acces
 ```
 assembly-playground/
 │
-├── exercise.s           # Exercise
-├── test.c               # Optional C program to test Assembly modules
+├── exercise/
+│ └── exercise.s           # Exercise
+│ └── test.c               # Optional C program to test Assembly modules
+├── io_utils.s             # Shared I/O utility library
 └── README.md
 ```
 
@@ -31,12 +33,24 @@ ld filename.o -o filename
 
 ## 🧰 Using the I/O Utility Library
 
-Some exercises rely on basic input/output functions (like input, output, outline, etc.) defined in a shared I/O utility library.
-To use it, simply compile your Assembly file together with io_utils.s:
+Some exercises rely on basic input/output functions (like input, output, outline, etc.)
+defined in a shared I/O utility library.
 
+You can use it in two ways:
+
+1️⃣ Compile and link the library explicitly:
 ```bash
 gcc filename.s ../io_utils.s -o demo
 ./demo
+```
+2️⃣ Or include it directly in your source file:
+```bash
+.include "../io_utils.s"
+```
+and then compile normally:
+```bash
+gcc filename.s -o filename
+./filename
 ```
 
 ---
