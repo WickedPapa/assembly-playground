@@ -29,6 +29,18 @@ ld filename.o -o filename
 
 ---
 
+## 🧰 Using the I/O Utility Library
+
+Some exercises rely on basic input/output functions (like input, output, outline, etc.) defined in a shared I/O utility library.
+To use it, simply compile your Assembly file together with io_utils.s:
+
+```bash
+gcc filename.s ../io_utils.s -o demo
+./demo
+```
+
+---
+
 ## 🧪 Testing with C
 
 You can test an Assembly function through a C program:

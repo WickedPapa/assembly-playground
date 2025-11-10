@@ -25,7 +25,7 @@ main:
 
     # --- Stampa 5 caratteri con outmess ---
     lea msg(%rip), %rbx
-    mov $5, %cx
+    mov $7, %cx
     call outmess
     call newline
 

@@ -15,16 +15,21 @@
 # --------------------------------------------
 # input
 # Legge un carattere da tastiera (stdin)
-# Restituisce la codifica ASCII in %al
+# Ignora '\n' e restituisce la codifica ASCII in %al
 # --------------------------------------------
 input:
     sub $8, %rsp
+
+.read:
     mov $0, %rax        # syscall read
     mov $0, %rdi        # fd = stdin
     lea (%rsp), %rsi    # buffer
     mov $1, %rdx        # lunghezza
     syscall
     mov (%rsp), %al     # risultato in AL
+    cmpb $'\n', %al     # se è newline
+    je .read             # leggi di nuovo
+
     add $8, %rsp
     ret
 
@@ -74,7 +79,7 @@ outline:
     mov %rbx, %rsi
 .Loop:
     movb (%rsi), %al
-    test %al, %al
+    cmpb $13, %al
     je .Done
     push %rsi
     call output
@@ -103,8 +108,27 @@ pause:
     call output
     mov $'i', %al
     call output
-    mov $'\n', %al
+    mov $' ', %al
     call output
+    mov $'u', %al
+    call output
+    mov $'n', %al
+    call output
+    mov $' ', %al
+    call output
+    mov $'t', %al
+    call output
+    mov $'a', %al
+    call output
+    mov $'s', %al
+    call output
+    mov $'t', %al
+    call output
+    mov $'o', %al
+    call output
+    mov $'.', %al
+    call output
+    call newline
     call input          # attesa tasto
     pop %rdi
     pop %rax
