@@ -108,14 +108,18 @@ pause:
     call output
     mov $'i', %al
     call output
+
     mov $' ', %al
     call output
+
     mov $'u', %al
     call output
     mov $'n', %al
     call output
+
     mov $' ', %al
     call output
+
     mov $'t', %al
     call output
     mov $'a', %al
@@ -126,8 +130,48 @@ pause:
     call output
     mov $'o', %al
     call output
+
+    mov $' ', %al
+    call output
+
+    mov $'p', %al
+    call output
+    mov $'e', %al
+    call output
+    mov $'r', %al
+    call output
+
+    mov $' ', %al
+    call output
+
+    mov $'c', %al
+    call output
+    mov $'o', %al
+    call output
+    mov $'n', %al
+    call output
+    mov $'t', %al
+    call output
+    mov $'i', %al
+    call output
+    mov $'n', %al
+    call output
+    mov $'u', %al
+    call output
+    mov $'a', %al
+    call output
+    mov $'r', %al
+    call output
+    mov $'e', %al
+    call output
+
     mov $'.', %al
     call output
+    mov $'.', %al
+    call output
+    mov $'.', %al
+    call output
+
     call newline
     call input          # attesa tasto
     pop %rdi
