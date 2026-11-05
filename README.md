@@ -1,7 +1,7 @@
 # Assembly Playground 🧩
 
 A collection of exercises and small programs written in **x86-64 Assembly (GAS syntax)**.
-Each file explores a different low-level concept: registers, loops, memory access, string operations, binary arithmetic, and system calls.
+Each file explores a different low-level concept: registers, loops, memory access, string operations, binary arithmetic, and system calls. 
 
 ---
 
